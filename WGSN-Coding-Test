@@ -1,0 +1,38 @@
+package com.company;
+
+import java.util.HashSet;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int a[] = {8,100,5,-100,7,2,8,9,6,9,8}; //First I defined the array with the values provided
+
+        HashSet <Integer> x = new HashSet<>(); //Here I am creating a variable to refer to the object
+
+        for(int i=0; i<a.length; i++){ //Here I am storing the array in a Set because the Set will store the unique elements
+            x.add(a[i]);
+        }
+        System.out.println("x= "+x); //Here I am printing the set of numbers that are inside the array
+
+        for(int set : x){ //Here I have created a simple for loop to check through the array and print each number of occurrences
+            int count = 0;
+            for(int j=0; j<a.length; j++){
+                if(set==a[j]){
+                    count++;
+                }
+            }
+            System.out.println(set+" occurs "+count+" times"); //Lastly, I am printing the end results with the function scripted above
+        }
+    }
+}
+
+OUTPUT:
+x= [2, -100, 100, 5, 6, 7, 8, 9]
+2 occurs 1 times
+-100 occurs 1 times
+100 occurs 1 times
+5 occurs 1 times
+6 occurs 1 times
+7 occurs 1 times
+8 occurs 3 times
+9 occurs 2 times
